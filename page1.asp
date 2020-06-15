@@ -56,10 +56,10 @@ Dim txt
 txt = Request.Form("userInput")
 	If isNumeric(txt) Then
       Response.Write txt & " is num"
-	  Session("userInput")= txt
-	  Call Response.Redirect("page2.asp")
+
+	  Call Response.Redirect("page2.asp?userinput="+txt)
 	Else       
-		Response.Write("<p id='errortxt'">" & txt & " is not a num </p>")
+		Response.Write("<p id='errortxt'>" & txt & " is not a num </p>")
 	End If
 End Sub
 %>
